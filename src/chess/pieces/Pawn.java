@@ -47,7 +47,7 @@ public class Pawn extends ChessPiece {
 				mat[p.getRow()][p.getColumn()] = true;
 			}
 			p.setValues(position.getRow() + 2, position.getColumn());
-			Position p2 = new Position(position.getRow() - 1, position.getColumn());
+			Position p2 = new Position(position.getRow() + 1, position.getColumn());
 			//Se a posição de uma linha acima e de duas linhas acima do peão existir e estiver vazia e se a quantidade de movimentos do peão ainda é zero (começo do jogo), vai poder mover pra lá
 			if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p) && getBoard().positionExists(p2) && !getBoard().thereIsAPiece(p2) && getMoveCount() == 0) {
 				mat[p.getRow()][p.getColumn()] = true;
